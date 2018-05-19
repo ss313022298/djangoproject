@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#显示点击question对象的内容#}
+    <h1>{{ question.question_text }}</h1>
+
+{#判断是否做出选择#}
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+
+{#  表单  触发按钮将执行action发送url#}
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in question.choice_set.all %}
+{#        type='radio'为单选框,名字要求一致,id要求唯一,所以用循环次数赋值, value定义于输入相关的值#}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+{#        label标签下for表示于哪个表单元素(input框)绑定#}
+        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+    {% endfor %}
+    <input type="submit" value="Vote" />
+
+
+
+
+
+
+
+</form>
+
+</body>
+</html>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/mysite.iml" filepath="$PROJECT_DIR$/.idea/mysite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../tygame-f5star/.idea/tygame-f5star.iml" filepath="$PROJECT_DIR$/../../tygame-f5star/.idea/tygame-f5star.iml" />
     </modules>
   </component>
 </project>

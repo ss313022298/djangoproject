@@ -6,13 +6,18 @@
 </head>
 <body>
 
-
+{#    判断是否参在question对象列表#}
     {% if latest_question_list %}
+
         <ul>
+{#        遍历每个列表中的question对象#}
         {% for question in latest_question_list %}
-            <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+{#获取以detail命名的url，并把参数传进去，获取问题内容#}
+            <h1><li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li></h1>
+
         {% endfor %}
         </ul>
+
     {% else %}
         <p>No polls are available.</p>
     {% endif %}
