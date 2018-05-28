@@ -14,7 +14,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.5 (mysite)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.4 (django_py3.4)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="tygame-f5star" />
   </component>
